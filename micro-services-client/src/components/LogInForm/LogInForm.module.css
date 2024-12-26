@@ -1,0 +1,77 @@
+.wrapper {
+  min-width: 98vw;
+  min-height: 96vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.base_form {
+  width: 300px;
+  height: 275px;
+  border: 2px solid #000000;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2,
+    input,
+    button {
+      margin: 10px 0px 10px 0px;
+    }
+
+    input {
+      width: 250px;
+      height: 30px;
+      border: 2px solid #000000;
+      border-radius: 15px;
+      outline: none;
+      padding: 5px;
+      font-size: 20px;
+    }
+
+    button {
+      width: 250px;
+      height: 40px;
+      border: 2px solid #000000;
+      border-radius: 15px;
+      background: none;
+      padding: 5px;
+      font-size: 20px;
+
+      &:hover {
+        animation: hoverOn 0.3s forwards;
+      }
+
+      &:not(:hover) {
+        animation: hoverOff 0.3s forwards;
+      }
+    }
+  }
+}
+
+@keyframes hoverOn {
+  0% {
+  }
+
+  100% {
+    background: #000000;
+    color: #ffffff;
+  }
+}
+
+@keyframes hoverOff {
+  0% {
+    background: #000000;
+    color: #ffffff;
+  }
+
+  100% {
+  }
+}
