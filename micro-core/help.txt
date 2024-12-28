@@ -1,0 +1,3 @@
+fastapi dev main.py - запуск сервера из директории micro-core (с перезапуском при изменении кода)
+uvicorn main:app --reload - запуск сервера из директории micro-core (с перезапуском при изменении кода)
+python main.py - рекомендуемый запуск сервера из директории micro-core (нужна конструкция uvicorn.run("main:app") в if __name__ ...)

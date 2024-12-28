@@ -19,19 +19,19 @@ function LogInForm({ onAuthorize }) {
     }
 
     try {
-      const response = await axios.post("http://localhost:8000/authorization", {
+      const response = await axios.post("http://127.0.0.1:8000/authorization", {
         email: email,
         password: password,
       });
 
       if (response.status === 200) {
         onAuthorize();
-      } else if (response.status === 201) {
-        alert("Пользователя с такими данными не существует!");
-        return;
+      } else {
+        alert(response.data.message);
       }
     } catch (error) {
       console.error("Ошибка сети при авторизации: ", error);
+      alert("Ошибка при соединении с сервером!");
     }
   };
 

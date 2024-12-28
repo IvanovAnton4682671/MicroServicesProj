@@ -1,2 +1,5 @@
 # то, что нельзя произносить
 micro-services-client/node_modules
+
+#виртуальное окружение
+venv/
